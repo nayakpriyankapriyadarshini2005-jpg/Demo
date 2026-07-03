@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Inputs</title>
+</head>
+<body>
+    <h2>Job Application Form</h2>
+
+    <form action="#">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="full name" placeholder="enter your name" id="fullname">
+<br><br>
+        <label  for="email">Email:</label> 
+    <input type="text"name="email"placeholder="enteryour email" id="email">   
+
+    <br> <br>
+        <label  for="password">Password:</label> 
+    <input type="password" name="password" placeholder="enter your password" id="password">
+
+    <br> <br>
+        <label  for="phone">Phone:</label> 
+    <input type="tel" name="phone" placeholder="enter your phone number" id="phone" maxlength="10" minlength="10">
+    <br> <br>
+        <label  for="age">Age:</label> 
+    <input type="number" name="age" placeholder="enter your age" id="age" min="18" max="61">
+    <br> <br>
+        <label  for="dob">Date of Birth:</label> 
+    <input type="datetime-local" name="dob" placeholder="enter your date of birth" id="dob">
+    <br> <br>
+        <label  for="image">Profile Image:</label> 
+    <input type="file" name="image" placeholder="upload your image" id="image" accept=".png" multiple>
+    <br> <br>
+        <label  for="gender">Gender:</label> 
+    <input type="radio" name="gender" value="male" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="female" id="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" value="other" id="other">
+    <label for="other">Other</label>
+
+    <br> <br>
+    <label for="country">Country:</label>
+    <select name="country" id="country">
+        <option value="">Select a country</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+    </select>
+    <br> <br>
+
+    <input type="checkbox" name="terms" id="terms">
+    <label for="terms">I agree to the terms and conditions</label>
+    <br>
+    <button>Submit</button>
+</form>
+</body>
+</html>
