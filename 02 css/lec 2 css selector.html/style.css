@@ -1,0 +1,87 @@
+/* universal selector */
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* Element selector or Tag selector */
+h1 {
+    color: #4426ca;
+}
+p {
+    color: #ca2644;
+}
+/* Class selector */
+.highlight {
+    background-color: #53c096;
+    
+}
+/* ID selector */
+#unique-box {
+    border: 2px solid #e68210;
+}
+/* Grouping selector */
+h1, .highlight, #unique-box {
+    font-size: italic;
+}
+/* Descendant selector -it will apply to all p elements inside any element with the class "container" */
+.nested div p {
+    color: #1ad157;
+}
+/* Child selector - it will apply to all p elements that are direct children of any element with the class "nested" */
+.nested > p {
+    background-color: #14cf24;
+}
+/*Descendant selector - it will apply to all p elements inside any element with the class "nested" */
+.nested > div > div > p {
+    background-color: #f33e06;
+}
+/* Adjacent sibling selector - it will apply to the p element that is immediately after any h1 element */
+h3 + p {
+    color: #1e9bcc;
+}
+/* General sibling selector - it will apply to all p elements that are siblings of any h3 element */
+h3 ~ p {
+    color: #aa0fc9;
+}
+/* Attribute selector - it will apply to all input elements with the type attribute set to "text" */
+input[type="text"] {
+    border: 2px solid #000; 
+}
+input[type="password"] {
+    border-color: #136391; 
+}
+/*child attribute selector - it will apply to all input elements with the type attribute set to "item" that are direct children of any form element */  
+ul > li {
+    color: #665fcc; 
+}
+/* Pseudo-class selector - it will apply to the button element when it is hovered over */
+.hover-button:hover {
+    background-color: #c00c57;
+    color: #333;
+}
+input:focus{
+    outline:none;
+}
+li:first-child {
+    color: rgb(238, 234, 8);
+}
+li:last-child {
+    color: rgb(7, 249, 253);
+}
+/*li:nth-child(2) {
+    color: rgb(7, 249, 253);
+}*/
+/*pseudo-element selector - it will apply to the first letter of all p elements */
+.pseudo::first-line {
+    text-decoration:wavy underline;
+}
+.pseudo::first-letter {
+    font-size: 2em;
+    color: #120fcf;
+}
+.pseudo::before {
+    content: '👉';
+    
+}
+.pseudo::after {
+    content:  '👈';
+}
