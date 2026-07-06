@@ -1,0 +1,17 @@
+.one   {   
+    background-color: red;
+    /*width: 300px;*/
+    max-width: 300px;
+    /*height: 300px;*/
+    min-height: 300px;
+}
+.two/*parent*/   {   
+    background-color: blue;
+    width: 50%;
+    height: 70%;
+}
+.parent   {   
+    background-color: green;
+    width:800px;
+    height: 400px;
+}
