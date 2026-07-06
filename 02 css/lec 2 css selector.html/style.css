@@ -47,7 +47,7 @@ input[type="text"] {
     border: 2px solid #000; 
 }
 input[type="password"] {
-    border-color: #136391; 
+    border-color: #f02a07; 
 }
 /*child attribute selector - it will apply to all input elements with the type attribute set to "item" that are direct children of any form element */  
 ul > li {
@@ -75,13 +75,21 @@ li:last-child {
     text-decoration:wavy underline;
 }
 .pseudo::first-letter {
-    font-size: 2em;
     color: #120fcf;
 }
-.pseudo::before {
+/* .pseudo::before {
     content: '👉';
     
-}
+} */
 .pseudo::after {
     content:  '👈';
+}
+.first:link{
+    color:#14db2e
+}
+.second:active{
+    color:#aa0fc9
+}
+.third:visited{
+    color:#ee3211
 }

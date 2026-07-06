@@ -1,0 +1,25 @@
+#html.html {
+    background-color: #55557a;
+}
+li {
+    background-color: #e60d0d !important;
+}
+li {
+    background-color: #67e457 !important;
+}
+li {
+    background-color: #1411ad;
+}
+.html{
+    background-color: aqua !important;
+}
+#html {
+    background-color: #a86363;
+}
+#html {
+    background-color: #f532aa;
+}
+/* specificity:
+element selector -> (0, 0, 1) -> 1
+class selector -> (0, 1, 0) -> 1
+id selector -> (1, 0, 0) -> 1*/
