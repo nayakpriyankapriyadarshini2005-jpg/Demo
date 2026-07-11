@@ -4,12 +4,12 @@ ul{
 }
 .html{
   position: relative;
-  /*top: 10px;*/
+  top: 10px;
   left: 10px;
   bottom: 100px;
 }
 li.html{
-    top: -20px;
+    top: 10px;
     left: 0px;
     right: 3px;
     bottom: 20px;
@@ -20,6 +20,15 @@ li.html{
     background-color: aqua;
     position: absolute;
 
-    top: 190px;
-    left: 48px;
+    top: 10px;
+    left: 10px;
+    inset:20px
+   /* position :inherit;*/
+   position unset;
+}
+li.javascript{
+background-color: rgb(127, 14, 233);
+position: fixed;
+top: 30px;
+left: 30px;
 }

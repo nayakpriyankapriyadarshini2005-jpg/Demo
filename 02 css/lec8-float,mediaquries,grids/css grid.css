@@ -1,0 +1,26 @@
+.container{
+    background-color: aliceblue;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(5,100px);
+
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    gap: 5px 5px;
+
+/* auto , percentage , fraction */
+grid-template-columns : 20% 20% 20% 20% 20%;
+grid-template-columns: repeat(4 ,25%);
+grid-template-rows: repeat(3 ,auto);
+
+grid-template-columns: 1fr 2fr 1fr 1fr;
+
+grid-template-columns: repeat(4 ,1fr);
+}
+.box{
+    color: white;
+    font-size: 3rem;
+}

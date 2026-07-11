@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+
+            print-color-adjust: exact;
+
+        }
+        /*media types*/
+        @media print{
+            .square{
+                background-color: aqua;
+                border: 10px solid black;
+            }
+        }
+
+        @media screen{
+            .square{
+                background-color: blueviolet;
+                border: 20px solid red;
+            }
+            h1{
+                font-size: 4rem;
+            }
+        }
+        /*media features*/
+        @media(orientation:portrait){
+            .square{
+            background-color: green;
+            }
+        }
+
+        /* @media(width <= 500px) */@media(450px >= width <= 500px){
+            .square{
+                background-color: brown;
+            }
+        }
+
+        @media((min-width:450) and (max-width:500px)){
+            .square{
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Media</h1>
+    <div class="square"></div>
+</body>
+</html>
