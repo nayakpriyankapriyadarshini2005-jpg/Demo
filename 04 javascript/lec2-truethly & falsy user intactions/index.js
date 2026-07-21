@@ -18,9 +18,23 @@
 // else{
 //     console.log(2)
 // }
-if("priyanka"){
+// if("priyanka"){
+// // console.log(1)
+// }
+// else{
+//     console.log(2)
+// }
+if(null){
 console.log(1)}
 else{
     console.log(2)
 }
-
+// if(-0){
+// console.log(1)}
+// else{
+//     console.log(2)
+// }// if(-0){
+// console.log(1)}
+// else{
+//     console.log(2)
+// }
