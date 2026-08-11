@@ -87,21 +87,57 @@
 // console.log(3)
 
 
-console.log("hii")
-    setTimeout(function call(){
-        console.log("priyanka")
-    }, 5000)
-    console.log("hello")
+// console.log("hii")
+//     setTimeout(function call(){
+//         console.log("priyanka")
+//     }, 5000)
+//     console.log("hello")
 
 
-    function f1(){
-        console.log(2)
+//     function f1(){
+//         console.log(2)
+//     }
+//     //setInterval(f1, 2000)//const Interval variable name
+//     const intervalId=setInterval(f1, 2000)
+//     console.log("/////// " ,intervalId)
+
+    
+//         const timeId = setTimeout(function (){
+//         console.log("clearing intervalId")
+//         clearInterval(intervalId)
+//         clearTimeout(timeId)
+//     },10000)
+
+
+    function f2(){
+        console.log(6)
     }
-    //setInterval(f1, 2000)//const Interval variable name
-    const intervalId=setInterval(f1, 2000)
-    console.log("/////// " ,intervalId)
+    f2()
+    let intervalId = setInterval(f2, 1000)
+    console.log("///////",intervalId)
+    // clearInterval(intervalId)
+    setTimeout(function (){
+clearTimeout(intervalId)
+    },2000)
 
-    // setTimeout(function (){
-    //     console.log("clearing intervalId")
-    //     clearInterval(intervalId)
-    // },10000)
+    // let timeout = setTimeout(function f2(){
+    // console.log("hello")
+    // clearTimeout(timeout)
+    // },2000)
+
+    setInterval(function(){
+        console.log("::::")
+
+    },1000)
+    
+    const id = setInterval(function(){
+        console.log("::::")
+    },1000)
+clearInterval(id)
+
+console.log(1)
+    const id = setInterval(function(){
+        console.log("::::")
+    },1000)
+clearInterval(id)
+console.log(2)
