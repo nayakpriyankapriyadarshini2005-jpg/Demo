@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script2.js"></script>
+
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 20px;
+            width: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>append and <span>appendchild </span></h1>
+    <div class="container">
+        <div class="card"> Card div</div>
+    </div>
+
+    <script>
+        const container = document.querySelector(".container")
+        const card = document.querySelector(".card")
+        const h1 = document.querySelector("h1")
+            
+        // console.log(container);
+        //     console.log(card);
+        //     console.log(h1);
+
+//container.append(h1)//append as a last child
+// container
+// //<div class=​"container">​<div class=​"card">​ Card div​</div>​</div>​
+// h1
+// //<h1>​append and appendchild​</h1>​
+// container.append(h1)
+// //undefined
+// container.append("hiiii")
+// //undefined
+// container.append("hello", card)
+//undefined//hiihello card div
+
+//container.appendChild("hiiii")//as append child only add element not text so it give error
+
+// const h1Clone = h1.cloneNode()
+// //undefined
+// h1Clone
+// //<h1>​</h1>​
+// const h1Clone2 = h1.cloneNode(true)
+// //undefined
+// h1Clone2
+// //<h1>​append and appendchild​</h1>​
+// h1Clone2.textContent = "hello world"
+// //'hello world'
+// container.appendChild(h1, h1Clone2)//child can not add more elements
+// //<h1>​append and appendchild​</h1>
+// container.append(h1, h1Clone2)//append can add multiple elements​
+            
+//different bten append and appendchild
+            //>>>append add multiple arguments as chile whereas appendchilod add only first element as a child in multiple argument.
+            //>>>append add text but appendchild can not add text.
+
+        //  const h1Clone2.textContent
+
+// h1Clone2
+// <h1>​append & appendChild​</h1>​
+// h1Clone2.textContent='hello world'
+// 'hello world'
+// container.prepend("hiiiuiu",h1Clone2)
+// card.remove()
+// undefined
+// container.remove()
+// undefined
+// h1.remove()
+// undefined
+//document.children[0].remove()
+                
+    </script>
+</body>
+</html>
