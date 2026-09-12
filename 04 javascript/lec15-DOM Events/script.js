@@ -71,11 +71,3 @@ secondH1.addEventListener("click", handleDomEventHeadingClick)
 //   //e.target.remove()
 // }
 
-
-
-
-
-
-
-
-

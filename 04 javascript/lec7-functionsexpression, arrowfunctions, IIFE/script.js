@@ -15,7 +15,7 @@
 // }
 // console.log(f2("hii",  "priyanka"));//"", ' ', " "//function expression
 // console.log("//////", f2)
-// console.log(f2());//a n b is undifine so two undifine print NaN
+// console.log(f2());//a n b is undefine so two undefine print NaN
 
 
 // function(a){

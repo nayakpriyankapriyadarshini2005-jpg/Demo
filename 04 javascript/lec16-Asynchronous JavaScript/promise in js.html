@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body style="font-family: cursive">
+    <h1>Promises In JS</h1>
+    <p>
+        - A Promise in JavaScript is an object that represents the eventual
+        completion (or failure) of an asynchronous operation and its
+        resulting value.
+    </p>
+    <p>
+        - It allows us to write asynchronous code that is more readable and
+        manageable, avoiding the "callback hell" that often occurs with
+        deeply nested callbacks.
+    </p>
+
+    <h3>A Promise have 3 states</h3>
+    <ul>
+        <li>
+            <p>
+                <b>pending:-</b> The initial state, neither fulfilled nor
+                rejected.
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>resolve (or fulfill):-</b> The operation completed
+                successfully, and the promise has a resulting value.
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>reject:-</b> The operation failed, and the promise has a
+                reason for the failure (typically an error object).
+            </p>
+        </li>
+    </ul>
+
+    <h3>then() & catch() method in Promises</h3>
+    <ul>
+        <li><b>then():- </b> When a promise is resolved, then() is automatically executed.</li>
+        <li><b>catch():- </b> When a promise is rejected, catch() is automatically executed.</li>
+    </ul>
+
+    <h3>Promise Chaining</h3>
+    <p>- Promise chaining is a way where we can call multiple promises one after another, so that each one waits for the
+        previous one to finish before it runs.</p>
+    <p>- eg: </p>
+
+
+    <script>
+        //new Promise(() =>{}) ====> promise body in console
+        // const p = new Promise(() => {})
+        // console.log(p); //default state pending
+        // const p = new Promise()>>>>> Error due to resolver function missing
+
+        // const  m  = new Promise((resolve, reject) => {
+            // setTimeout(()=>{
+                // console.log("resolve promise");
+                // //resolve ()===unfullfill
+                // //resolve('priya') //fullfill state of promise
+                // resolve({name:'priya'}) //fullfill state of promise as object
+                // console.log("promise is rejected")
+                // reject("no")
+                // reject()
+                // reject({value:0})
+            // }, 6000)
+        // })
+        // console.log(m)
+
+        // const p1 = new Promise(() =>{})
+// undefined
+// p1
+
+        // const p = new Promise((resolve, reject) =>{
+        //     const number = Math.round(Math.random()*11)
+
+        //     if(number > 5)
+        //     resolve(number)
+        //     else
+        //         reject(number)
+        // })
+        // p.then((res)=>{
+        //     // console.log("promise is resolve", p);
+        //     console.log("promise is resolve", res);
+        // })
+        // .catch((err)=>{
+            // console.log("promise is rejected", p);
+            // console.log("promise is rejected", err);
+        // })
+        // .finally(()=>{
+        //     console.log("always finally");
+            
+        // })
+
+        
+    </script>
+
+<!-- //====================promise Chaining======= -->
+  <button id="resolve-button">RESOLVE</button>
+  <button id="reject-button">REJECT</button>
+
+<script>
+    const resolveBtn = document.querySelector("#resolve-button")
+    const rejectBtn = document.querySelector("#reject-button")
+
+    const p = new Promise((resolve, reject)=> {
+        resolveBtn.addEventListener('click', () => {
+            resolve("promise got resolved")
+        })
+        rejectBtn.addEventListener('click', () => {
+            reject("promise got rejected")
+        })
+    })
+    p.then((res) => {
+        console.log("you r resolved", res);   //then block can declared multiple time.
+       // return "JT" //"JT" //new Promise
+    })
+    .then((res)=> {
+        console.log("you r resolved again.", res);
+    })
+    .then((res)=> {
+        console.log("you r resolved once again.", res);
+    })
+    .catch((err) => {
+        console.log("you r rejected", err)   //catch is once declaredcnot multiple time.
+    })
+
+    /**
+     * -By default then function return a Promise whoose state fulfilled
+     * and the resulting value is undefined.
+     * -If we want some custom result value of returned Promise then we
+     * need to return some value from then() function.
+     * **/
+</script>
+</body>
+</html>

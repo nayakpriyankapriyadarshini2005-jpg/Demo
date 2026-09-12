@@ -135,16 +135,16 @@
 
 //=============findIndex()=========
 numbers = [10, 49, 35, 54]
-// const number = Numbers.find(num => num==10)
-// console.log("is 10 found" , number)
-// const numberIdx = Numbers.findIndex(num => num==45)
-// console.log("is 45 found" , numberIdx)
+const number = numbers.find(num => num==10)
+console.log("is 10 found" , number)
+const numberIdx = numbers.findIndex(num => num==45)
+console.log("is 45 found" , numberIdx)
 
 //const users = [{id:1, name:"priyanka", isActive:true}, {id:2, name:"priyu", isActive:false}, {id:3, name:"pika", isActive:true}]
 const sum = numbers.reduce((prevVal , currVal, idx , arr) => {
         console.log("previous value is",prevVal, "current is",currVal, "index is",idx, "of array",arr)
         //return 100//reduce()skip 1st and excute frm second value it store prev value in prevVal
-        //return prevVal+currVal
+        return prevVal+currVal
 })
 console.log("sum is: ", sum)
 
@@ -164,7 +164,8 @@ const order = [{
     status:"Delivered"
     },
 ]
-//find alredy deliverd oreder , merge the deliverd items order
+// //find alredy deliverd oreder , merge the deliverd items order
+
 const deliveredOrdered = order.filter(orders => orders.status === 'Delivered')
 console.log("delivered orders are",deliveredOrdered)
 
@@ -176,7 +177,7 @@ console.log("//// total sale is", totalSale)
 
 const student = [{
       id:101,
-    name:"priyanak",
+    name:"priyanka",
     age:23
   }, 
   { 
@@ -191,9 +192,9 @@ const student = [{
     },
 ]
 const sumage = student.reduce((prev, curr) => prev + curr.age, 0)
-// student.reduce((prev, curr) => {
-//     console.log("prev age is" ,prev,"current is",curr)
-//     return prev+curr.age
-// },0)
+student.reduce((prev, curr) => {
+    console.log("prev age is" ,prev,"current is",curr)
+    return prev+curr.age
+},0)
 console.log("total age is",sumage)
 console.log("avrage age is",sumage/student.length)

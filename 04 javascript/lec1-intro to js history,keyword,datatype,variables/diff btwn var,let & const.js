@@ -52,3 +52,8 @@ console.log(y)
 var x = 10;
 let y =20;
 const z = 30;
+
+let n = null;
+console.log(n??"priya");
+let name1 = "";
+console.log(name1 ??"priya");

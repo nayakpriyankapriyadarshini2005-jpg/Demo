@@ -78,8 +78,8 @@
 // console.log(3)
 
 // console.log(1)
-// setTimeout(function f1(){//settimeout(f1,/f1()/undefined 3000)
-// console.log(2)//consol.log(3)
+// setTimeout(function f1(){      //settimeout(f1,/f1()/undefined 3000)
+// console.log(2)                //consol.log(3)
 // },3000)
 // function f1(){
 //     console.log(2)

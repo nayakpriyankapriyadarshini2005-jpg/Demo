@@ -5,21 +5,22 @@ function myFun(){
     console.log("Good Morning!!")
 }
 
-// myFun()
+ myFun()
 
-function greet(name){//'priya'
+function greet(name = 'piku'){//'priya'
     console.log("Good morning", name, '!!')
 }
-// greet("priyanka")
-// greet(true)
-// greet(10)
-// greet()
-// greet("priya" , 10)
+ greet("priyanka")
+greet(true)
+greet(10)
+greet()
+greet("priya" , 10)
 
  function addJTTag(name){
      return "JT ans " + name
  }
-// let updateName =addJTTag("priya")
+ addJTTag(biku)
+//let updateName =addJTTag("priya")
 // console.log(updateName)
 
 function add(a,b){

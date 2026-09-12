@@ -1,0 +1,240 @@
+ <!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: cursive;">
+    <h1>API - (Application Programming Interface)</h1>
+    <p>- It is a set rules & protocols that allows different applications to communicate with each other</p>
+    <p>- In simple word it's just a breeze between 2 applications.</p>
+
+    <div style="border: 2px solid black; border-radius: 5px; background-color: lightgray; padding: 10px;">
+        <h3>Free Fake API's List</h3>
+        <ul style="margin-top: -15px;">
+            <li>Dummy JSON</li>
+            <li>JSON placeholder</li>
+            <li>catfact.ninja</li>
+            <li>dog image api</li>
+        </ul>
+    </div>
+
+    <h1>JSON - (javascript Object Notation)</h1>
+    <h3>Diff bet<sup>n</sup> javascript Object & JSON ?</h3>
+    <ul>
+        <li>In key key must be encoded with double quote (String value)</li>
+        <li>In JSON no trailing comma should be avilable.</li>
+    </ul>
+
+    <table id="productsTable" border="1">
+        <caption>Products Table</caption>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Brand</th>
+            <th>Catagory</th>
+            <th>Title></th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Year</th>
+       </tr> 
+    </thead>
+    <tbody></tbody>
+    </table>
+
+    <script>
+        fetch('https://dummyjson.com/products') //api or function fetch 
+            .then((response) => { // response callback function show promise result
+                // console.log("////", response);
+                //console.log("////", response.json());
+                return response.json()
+            })
+            // .then((res) => {
+            //     console.log('......', res);
+            //     return res
+            // })
+            .then((res) =>{
+                console.log("11111",res)
+                console.log("22222",res.products)
+
+                const c = res.products.map((product) =>{
+                return {
+                    id:product.id,
+                    price:product.price,
+                    brand :product.brand,
+                    title:product.title,
+                    catagory:product.catagory,
+                    rating:product.rating,
+                    createdYear:new Data(product.meta.createdAt).getFullYear()
+                }
+               })
+               console.log("333333", c);
+               const tbody = document.querySelector("#productsTable tbody")
+               
+               c.forEach(p => {
+                const idRow = document.createElement('tr')
+                
+                const idCol = document.createElement('td')
+                idCol.innerText = p.id
+                const titleCol = document.createElement('td')
+                title.innerText = p.title
+                
+                const brandCol = document.createElement('td')
+                title.innerText = p.brand
+                const priceCol = document.createElement('td')
+                title.innerText = p.price
+                const catagoryCol = document.createElement('td')
+                title.innerText = p.catagory
+                const ratingCol = document.createElement('td')
+                title.innerText = p.rating
+                 YearCol = document.createElement('td')
+                title.innerText = p.createdYear
+               
+                row.append(idCol, titleCol, brandCol, catagoryCol, priceCol, ratingCol, YearCol)
+                
+                tbody.append(row)
+               })
+            })
+            
+            .catch((err) =>{
+                console.log("some error",err);  
+            })
+    </script>
+</body>
+</html>-->
+ 
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: cursive;">
+    <h1>API - (Application Programming Interface)</h1>
+    <p>- It is a set rules & protocols that allows different applications to communicate with each other</p>
+    <p>- In simple word it's just a breeze between 2 applications.</p>
+
+    <div style="border: 2px solid black; border-radius: 5px; background-color: lightgray; padding: 10px;">
+        <h3>Free Fake API's List</h3>
+        <ul style="margin-top: -15px;">
+            <li>Dummy JSON</li>
+            <li>JSON placeholder</li>
+            <li>catfact.ninja</li>
+            <li>dog image api</li>
+        </ul>
+    </div>
+
+    <h1>JSON - (javascript Object Notation)</h1>
+    <h3>Diff bet<sup>n</sup> javascript Object & JSON ?</h3>
+    <ul>
+        <li>In key key must be encoded with double quote (String value)</li>
+        <li>In JSON no trailing comma should be avilable.</li>
+    </ul>
+
+    <br><br><br>
+    <table id="productsTable" border="1">
+        <caption>Products Table</caption>
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>fetch('https://dummyjson.com/products') // FETCH IS USED FOR API CALL
+         .then((response) => {
+        //     // console.log("/////", res)
+        //     // console.log("//////", response.json())
+             return response.json()
+            
+         })
+         .then((res) => {
+             console.log("1111111", res)
+            console.log("222222", res.products)
+            
+            const modifiedProducts = res.products.map((product) => {
+                return {
+                   id: product.id,
+                   title: product.title,
+                   brand: product.brand,
+                   category: product.category,
+                   price: product.price,
+                   rating: product.rating,
+                   <!-- createdYear: new Date(product.meta.createdAt).getFullYear() -->
+                }
+            })
+            console.log("333333", modifiedProducts)
+
+            const tbody = document.querySelector("#productsTable tbody")
+            modifiedProducts.forEach(p => {
+                const row = document.createElement('tr')
+
+                 const idCol = document.createElement('td')
+                 idCol.innerText = p.id
+                const titleCol = document.createElement('td')
+                titleCol.innerText = p.title
+                const brandCol = document.createElement('td')
+                brandCol.innerText = p.brand
+                const categoryCol = document.createElement('td')
+                categoryCol.innerText = p.category
+                const priceCol = document.createElement('td')
+                priceCol.innerText = p.price
+                const ratingCol = document.createElement('td')
+                ratingCol.innerText = p.rating
+
+                 row.append(idCol, titleCol, brandCol, categoryCol, priceCol, ratingCol)
+                 tbody.append(row)
+            })
+        })
+         .catch((err) => {
+             console.log("Some error occuured", err)
+            
+         })
+
+
+         //ADDING A NEW PRODUCT USING FETCH
+         
+         fetch("https://dummyjson.com/products/add", {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                title: "laptop bag",
+                   brand: "lenevo",
+                   category: "bag",
+                   price: "3654",
+                   rating: "4",
+                   <!-- createdYear:"2026" -->
+            })
+         })
+         .then((response)=>{
+            console.log("got response", response);
+        if(response.status === 201)
+            return  response.json()
+        // console.log();
+        
+        else
+            throw new Error("unable to create product")
+         })
+         .then((res) => {
+            console.log("final result is", res);
+            
+         })
+         .catch((err)=>{
+            console.log("error", err);
+            
+         })
+
+    </script>
+</body>
+</html> 

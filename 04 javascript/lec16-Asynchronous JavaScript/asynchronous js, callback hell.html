@@ -40,25 +40,66 @@
     //     console.log(">>then tea is ready.");
     //     },3000)
 
-        function makeTea (step, delay, nextStep) {
-            setTimeout(() => {
-                console.log(step);
-                if(nextStep)
-                nextStep()
-            },delay)
-        }
-         //makeTea("Boil water",1000)
-           makeTea("Boil water",1000, () => {
-        makeTea("Add ingredients",1000, () => {
-            makeTea("Tea ready",1000, ()=>{
-            makeTea("pour in cups", 1000)
-            })
-        })    
-           })
+        // function makeTea (step, delay, nextStep) {
+        //     setTimeout(() => {
+        //         console.log(step);
+        //         if(nextStep)
+        //         nextStep()
+        //     },delay)
+        // }
+        //  //makeTea("Boil water",1000)
+        //    makeTea("Boil water",1000, () => {
+        // makeTea("Add ingredients",1000, () => {
+        //     makeTea("Tea ready",1000, ()=>{
+        //     makeTea("pour in cups", 1000)
+        //     })
+        // })    
+        //    })
         //makeTea("Add ingredients",2000)
         // makeTea("Tea ready",3000)
+          
+        function sendEmail (success, failure) {
+          const number = Math.round(Math.random()*11)
 
+          if(number > 4){
+            success()
+          }else{
+            failure()
+          }
+        }
+
+        function success(){
+          console.log("Email send successefull");
+          
+        }
+        function failure(){
+          console.log("Email not send successefull");
+          
+        }
+        sendEmail(success, failure)
+       
+        sendEmail(function () {
+          console.log("Email-1 is send")
+        
+            sendEmail(() => {
+              console.log("Email-2 is send")
+               
+              sendEmail(() => {
+              console.log("Email-3 is send")
+              }, () => {
+                console.log("email-3 is not send");
+               })
+       
+              }, () => {
+                console.log("email-2 is not send");
+               })
+       
+              }, () => {
+          console.log("email-1 is not send");
+          
+        })
+        
         </script>
          </body>
-    
+    <!-- Promise function in JavaScript to avoid callback function -->
 </html>

@@ -20,9 +20,9 @@
 //=======Array Methods=======
 
 const fruits = ["Apple", "Banana", "Mango"];
-fruits.push("Orange"); // add element at the end
-fruits.push("Grapes", "Pineapple"); // add multiple elements at the end
-console.log(fruits);
+// fruits.push("Orange"); // add element at the end
+// fruits.push("Grapes", "Pineapple"); // add multiple elements at the end
+// console.log(fruits);
 
 // fruits.pop(); // remove last element
 // console.log(fruits);
@@ -42,9 +42,10 @@ console.log(fruits);
 // console.log(fruits.indexOf("Mango", 3)); // -1 if not exist in the array from index 3
 // console.log(fruits.indexOf("Mango", 2)); // 2 if exist in the array from index 2
 
+// //method of changing the element of array is by using index number and assigning new value to it.
 // console.log(fruits[2] = "kiwi"); // change the 2 index element
 // console.log(fruits);
-// //method of changing the element of array is by using index number and assigning new value to it.
+
 // console.log(fruits.length); // 4
 // console.log(fruits[fruits.length - 1]); // last element of the array
 // console.log(fruits[fruits.length - 2]); // second last element of the array
@@ -64,7 +65,8 @@ console.log(fruits);
 // fruits.push('mango', 'Banana')
 // console.log(fruits)
 // console.log("last index of mango", fruits.lastIndexOf("mango"))
-// console.log(fruits.slice(0 , 3))
+
+// console.log(fruits.slice(1 , 3)) //return new array with the index given without changing given array
 // console.log(fruits.slice(1, 3))
 // console.log(fruits.slice(2))
 // console.log(fruits.slice())//slice give new array type output
@@ -75,58 +77,59 @@ console.log(fruits);
 fruits.splice(2, 3, "Cherry")
 console.log("after splice2", fruits)
 
-const num = [13, 15, 17]
-const frunum = fruits.concat(num)
+const num = [13, 15, 17] 
+const frunum = fruits.concat(num)//joint num arr with fruits arr
 console.log("fruits with numbers", frunum)
 
-const frustr = fruits.join('-')//u can take other simbol also
+const frustr = fruits.join('-')//u can take other symbol also
 console.log(frustr)
 
 fruits.reverse()
 console.log("after revers", fruits)//existing array change only
 
-//fruits.push(1, 2, 3)
-fruits.push(45, 63, 23)
+// //fruits.push(1, 2, 3)
+// fruits.push(45, 63, 23)
 fruits.sort()
 console.log("after sort", fruits);
 
-//const arr = [23, 45, 13,46]
-//arr.sort()
-//console.log(arr)
 const arr = [23, 45, 13,46]
-//arr.sort((a,b)=>a-b)//ascending
-arr.sort((a,b)=>b-a)//descending
+arr.sort()
 console.log(arr)
 
-const arr = [10, 20, 30, 4]
-arr.sort(function xyz(a, b){
+const arr1 = [23, 45, 13,46]
+arr1.sort((a,b)=>a-b)//ascending
+// arr1.sort((a,b)=>b-a)//descending
+console.log(arr1)
+
+const arr2 = [10, 20, 30, 4]
+arr2.sort(function xyz(a, b){
     return a-b
 })
-console.log(arr)
+console.log(arr2)
 
-const arr = [10, 20, 30, 4]
-arr.sort(function xyz(){
+const arr3 = [10, 20, 30, 4]
+arr3.sort(function(a = 4,b=30){
     if(a>b){
         return a
     }else{
         return b
     }
 })
-console.log(arr)
+console.log(arr3)
 
-const arr = [10, 20, 30, 4]
-arr.sort(function(){
+const arr4 = [10, 20, 30, 4]
+arr4.sort(function(){
     return f2
     function f2(a,b){
         return a-b
     }
     f2()
 })
-console.log(arr)
+console.log(arr4)
 
-const arr = [23, 45, 13,46]
-arr.sort(xyz)
-console.log(arr)
+const arr5 = [23, 45, 13,46]
+arr5.sort(xyz)
+console.log(arr5)
 function xyz(a, b){
     return a-b
 }
